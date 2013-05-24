@@ -5,6 +5,10 @@ describe Array do
   # subject(:arr) { Array.new }
   describe "#my_uniq" do
 
+    it "doesn't change an array that has no duplicates" do
+      [3, 2, 6].my_uniq.should == [3, 2, 6]
+    end
+
     it "filters out duplicates" do
       [1, 2, 1, 3, 3].my_uniq.sort.should == [1, 2, 3]
     end
