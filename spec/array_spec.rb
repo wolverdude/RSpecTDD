@@ -96,15 +96,11 @@ describe Array do
     end
 
     it "handles multiple days" do
-      [50, 45, 47, 90, 83].should == [1, 3]
+      [50, 45, 47, 90, 83].stock_picker.should == [1, 3]
     end
 
     it "returns the least of many evils" do
-      [50, 45, 41, 40, 33].should == [2, 3]
-    end
-
-    it "finds the closest two days if there are multiple possiblities" do
-      [20, 25, 30, 40].should == [2, 3]
+      [50, 45, 41, 40, 33].stock_picker.should == [2, 3]
     end
 
   end
